@@ -5,124 +5,138 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Darshna Shah - PHP / CodeIgniter / Laravel Developer</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body{
-        background:#0b0c10;
-        color:#c5c6c7;
-        line-height:1.6;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+    background:#0b0b11;
+    color:#d8d8e3;
+    overflow-x:hidden;
+}
 
-    /* Header */
-    header{
-        text-align:center;
-        padding:80px 20px;
-        background:linear-gradient(135deg,#0b0c10,#1f2833);
-        animation:fadeIn 1.2s ease-in-out;
-    }
-    header h1{
-        font-size:50px;
-        font-weight:600;
-        color:#66fcf1;
-        text-shadow:0 0 10px #45a29e;
-    }
-    header p{
-        font-size:20px;
-        margin-top:10px;
-        color:#c5c6c7;
-    }
+/* Gradient Heading */
+header{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(135deg,#1a1a27,#101014);
+    animation:fadeIn 1s ease-in-out;
+}
+header h1{
+    font-size:55px;
+    font-weight:700;
+    background:linear-gradient(90deg,#e850ff,#70e0ff);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 15px rgba(255,255,255,0.2);
+    animation:glow 3s ease-in-out infinite alternate;
+}
+header p{
+    margin-top:12px;
+    font-size:20px;
+    color:#b8b8c7;
+}
 
-    section{
-        max-width:1000px;
-        margin:auto;
-        padding:50px 25px;
-        animation:fadeInUp 1.3s ease;
-    }
+/* Section */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 25px;
+    animation:fadeUp 1s ease;
+}
 
-    h2{
-        font-size:32px;
-        margin-bottom:20px;
-        color:#66fcf1;
-        border-left:5px solid #45a29e;
-        padding-left:15px;
-    }
+h2{
+    font-size:34px;
+    margin-bottom:25px;
+    color:#e850ff;
+    border-left:6px solid #70e0ff;
+    padding-left:15px;
+}
 
-    /* About */
-    .about{
-        font-size:18px;
-        color:#c5c6c7;
-    }
+/* About */
+.about{
+    font-size:19px;
+    color:#d8d8e3;
+    line-height:1.8;
+}
 
-    /* Skills */
-    .skills span{
-        display:inline-block;
-        background:#1f2833;
-        color:#66fcf1;
-        padding:10px 18px;
-        margin:8px;
-        border-radius:25px;
-        border:1px solid #45a29e;
-        transition:0.3s;
-    }
-    .skills span:hover{
-        background:#66fcf1;
-        color:#0b0c10;
-        transform:scale(1.1);
-        cursor:pointer;
-    }
+/* Skills */
+.skills span{
+    display:inline-block;
+    background:#161624;
+    padding:12px 20px;
+    margin:10px;
+    border-radius:30px;
+    border:1px solid #272744;
+    color:#70e0ff;
+    font-weight:500;
+    transition:0.3s;
+    box-shadow:0 0 6px rgba(112,224,255,0.2);
+}
+.skills span:hover{
+    background:linear-gradient(90deg,#e850ff,#70e0ff);
+    color:#0b0b11;
+    transform:scale(1.12);
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(224,80,255,0.6);
+}
 
-    /* Projects */
-    .project{
-        background:#1f2833;
-        padding:25px;
-        margin-bottom:25px;
-        border-radius:12px;
-        border:1px solid #45a29e;
-        transition:transform .3s, box-shadow .3s;
-    }
-    .project:hover{
-        transform:translateY(-5px);
-        box-shadow:0 0 15px #45a29e;
-    }
-    .project h3{
-        color:#66fcf1;
-        margin-bottom:10px;
-        font-size:24px;
-    }
-    .project p{
-        font-size:17px;
-        color:#c5c6c7;
-    }
+/* Projects */
+.project{
+    background:#151522;
+    padding:28px;
+    margin-bottom:35px;
+    border-radius:15px;
+    border:1px solid #29293f;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+.project:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 0 22px rgba(224,80,255,0.4);
+}
+.project h3{
+    font-size:26px;
+    color:#e850ff;
+    margin-bottom:12px;
+}
+.project p{
+    font-size:18px;
+    line-height:1.7;
+    color:#d8d8e3;
+}
 
-    /* Contact */
-    .contact{
-        font-size:20px;
-        color:#c5c6c7;
-    }
-    .contact strong{
-        color:#66fcf1;
-    }
+/* Contact */
+.contact{
+    font-size:22px;
+}
+.contact strong{
+    color:#70e0ff;
+}
 
-    @keyframes fadeIn {
-        from{opacity:0;} to{opacity:1;}
-    }
-    @keyframes fadeInUp {
-        from{opacity:0; transform:translateY(20px);} 
-        to{opacity:1; transform:translateY(0);}
-    }
+/* Animations */
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
 
-    /* Footer */
-    footer{
-        text-align:center;
-        padding:20px;
-        margin-top:40px;
-        color:#c5c6c7;
-        font-size:14px;
-        border-top:1px solid #1f2833;
-    }
+@keyframes fadeUp { 
+    from {opacity:0; transform:translateY(25px);} 
+    to {opacity:1; transform:translateY(0);} 
+}
+
+@keyframes glow{
+    from{filter:drop-shadow(0 0 4px #e850ff);}
+    to{filter:drop-shadow(0 0 12px #70e0ff);}
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    border-top:1px solid #1a1a27;
+    color:#7c7c8e;
+    font-size:15px;
+}
 </style>
 </head>
 
@@ -136,10 +150,9 @@
 <section>
     <h2>About Me</h2>
     <p class="about">
-        I am a backend developer with strong expertise in PHP, CodeIgniter, Laravel, JavaScript, jQuery, MySQL, 
-        REST APIs, and payment gateway integrations. I have worked on booking systems, attendance platforms, 
-        mobile app APIs, and real-time location tracking systems. I enjoy building powerful backend logic 
-        and secure, scalable APIs.
+        I am a backend developer specializing in PHP, CodeIgniter, Laravel, and powerful API development. 
+        I build clean backend architecture, efficient database systems, and real-time features. 
+        My work includes booking platforms, attendance systems, mobile app APIs, and tracking systems.
     </p>
 </section>
 
@@ -162,28 +175,20 @@
 
     <div class="project">
         <h3>Guestay</h3>
-        <p>
-            A rental property booking system with payment integration, refund on cancellation, 
-            and API for property cleaning via a mobile app. Includes booking management, service scheduling 
-            and automated updates.
-        </p>
+        <p>Rental property booking system with payment integration, cancellation refund logic, 
+        and service provider cleaning API via mobile app.</p>
     </div>
 
     <div class="project">
         <h3>Simchakinder</h3>
-        <p>
-            A children attendance platform with real-time bus pickup & drop tracking using APIs. 
-            Bus route location updates, attendance logs, and parent notifications.
-        </p>
+        <p>Children attendance solution with real-time bus pickup & drop tracking using GPS & API updates. 
+        Includes route logs and notification system.</p>
     </div>
 
     <div class="project">
         <h3>Birds and Me</h3>
-        <p>
-            A unique contest platform where users upload original bird photos captured by themselves 
-            (no Google images). Top 3 most unique photos win prizes. Included image validation, 
-            contest scoring, and user participation management.
-        </p>
+        <p>A contest platform where users upload their personally captured unique bird photos (no Google images). 
+        Auto validation, winner logic, and participation scoring.</p>
     </div>
 
 </section>
