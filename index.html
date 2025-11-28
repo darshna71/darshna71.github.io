@@ -98,11 +98,41 @@
 					<input type="email" name="_replyto" placeholder="Your Email" required>
 					<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
 					<button type="submit">Send Message</button>
+					<input type="hidden" name="_redirect" value="https://darshna71.github.io/?success=1">
 				</form>
+				<div id="flashMessage" style="
+					display:none;
+					background:#d4edda;
+					color:#155724;
+					padding:12px;
+					margin:15px 0;
+					border-radius:6px;
+					border:1px solid #c3e6cb;
+				">
+				Message sent successfully!
+				</div>
+
 			</section>
 		</div>
 		<footer>
 			&copy; 2025 Darshna Shah. All rights reserved.
 		</footer>
 	</body>
+	<script>
+		// Check URL for ?success=1
+		const urlParams = new URLSearchParams(window.location.search);
+	
+		if (urlParams.get('success') === '1') {
+			document.getElementById("flashMessage").style.display = "block";
+	
+			// Hide after 4 seconds
+			setTimeout(() => {
+				document.getElementById("flashMessage").style.display = "none";
+			}, 4000);
+	
+			// Remove ?success=1 from URL (clean it)
+			const cleanUrl = window.location.origin + window.location.pathname;
+			window.history.replaceState({}, document.title, cleanUrl);
+		}
+	</script>
 </html>
