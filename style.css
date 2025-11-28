@@ -1,0 +1,121 @@
+/* ---------- Colors ---------- */  
+:root {  
+    --bg: #0E0E0E;  
+    --section-bg: #161616;  
+    --text-main: #D9E3EA;  
+    --text-muted: #546160;  
+    --heading: #88ADA3;  
+    --icon-default: #B8D8D1;  
+    --icon-hover: #A7CFC5;  
+    --link: #B8D8D1;  
+    --link-hover: #A7CFC5;  
+}  
+  
+/* ---------- Body & Header ---------- */  
+body {  
+    margin:0;  
+    font-family: Arial, sans-serif;  
+    background-color: var(--bg);  
+    color: var(--text-main);  
+}  
+header {  
+    text-align:center;  
+    padding:40px 20px;  
+}  
+h1 { font-size:36px; margin-bottom:10px; color: var(--text-main); }  
+h2 { color: var(--heading); margin-bottom:10px; }  
+p { margin:8px 0; line-height:1.6; }  
+.container { width:85%; max-width:900px; margin:auto; }  
+  
+/* ---------- Sections ---------- */  
+section {  
+    margin:45px 0;  
+    background: var(--section-bg);  
+    padding:25px;  
+    border-radius:12px;  
+    border:1px solid #2A2A2A;  
+    box-shadow:0.5px 0.5px 12px #000;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    opacity:0;  
+    transform: translateY(20px);  
+    animation: fadeInUp 1s forwards;  
+}  
+section:hover {  
+    transform: translateY(-5px) scale(1.02);  
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);  
+}  
+  
+/* ---------- Fade-in Animation ---------- */  
+@keyframes fadeInUp {  
+    to { opacity:1; transform: translateY(0); }  
+}  
+  
+/* ---------- Service Icons ---------- */  
+.service-icon {  
+    vertical-align: middle;  
+    margin-right:8px;  
+    stroke: var(--icon-default);  
+    transition: transform 0.3s ease, stroke 0.3s ease;  
+}  
+.service-icon:hover {  
+    transform: scale(1.2);  
+    stroke: var(--icon-hover);  
+}  
+  
+/* ---------- Contact Form ---------- */  
+input, textarea {  
+    width:100%;  
+    padding:12px;  
+    margin:8px 0 15px 0;  
+    border-radius:8px;  
+    background:#111;  
+    border:1px solid #333;  
+    color: var(--text-main);  
+}  
+button {  
+    padding:12px 22px;  
+    cursor:pointer;  
+    background:#222;  
+    color: var(--text-main);  
+    border-radius:8px;  
+    border:1px solid #444;  
+}  
+button:hover { background:#333; }  
+  
+/* ---------- Links ---------- */  
+a { color: var(--link); text-decoration:none; }  
+a:hover { color: var(--link-hover); }  
+  
+/* ---------- Footer ---------- */  
+footer {  
+    text-align:center;  
+    padding:20px;  
+    font-size:0.9rem;  
+    color: var(--text-muted);  
+    border-top:1px solid #2A2A2A;  
+}  
+
+/* ---------- PERFECT ARROW LIST ALIGNMENT ---------- */
+.why-flex {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-flex li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.why-flex li::before {
+    content: "➤";
+    font-size: 18px;
+    color: #7ec8c3;
+    flex-shrink: 0;
+    line-height: 1.2;
+    margin-top: 3px;
+}
